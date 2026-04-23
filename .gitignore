@@ -1,0 +1,14 @@
+node_modules
+dist
+.vercel
+
+# Env files — keep .env.example committed, everything else local-only.
+.env
+.env.local
+.env.*.local
+
+# OS / editor noise
+.DS_Store
+.vscode
+.idea
+*.log
