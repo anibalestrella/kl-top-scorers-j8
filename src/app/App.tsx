@@ -9,7 +9,7 @@ export default function App() {
   // Prefer live data; fall back to the bundled defaults so the design always
   // has something to render during the first paint or if the API fails.
   const liveOrDefault: TopScorerRow[] = players && players.length > 0
-    ? players.slice(0, 7).map(({ rank, name, goals }) => ({ rank, name, goals }))
+    ? players.slice(0, 7).map(({ rank, name, team, goals }) => ({ rank, name, team, goals }))
     : DEFAULT_TOP_SCORERS;
 
   return (

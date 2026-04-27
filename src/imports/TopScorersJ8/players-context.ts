@@ -8,16 +8,16 @@
 
 import { createContext, useContext } from "react";
 
-export type TopScorerRow = { rank: number; name: string; goals: number };
+export type TopScorerRow = { rank: number; name: string; team?: string; goals: number };
 
 export const DEFAULT_TOP_SCORERS: TopScorerRow[] = [
-  { rank: 1, name: "Aleix martí", goals: 28 },
-  { rank: 2, name: "jorge escobar", goals: 16 },
-  { rank: 3, name: "gerard verge", goals: 15 },
-  { rank: 4, name: "sergi gestí", goals: 14 },
-  { rank: 5, name: "galde hugue", goals: 14 },
-  { rank: 6, name: "adri espinar", goals: 13 },
-  { rank: 7, name: "julen álvarez", goals: 13 },
+  { rank: 1, name: "Aleix martí",    team: "Ultimate Móstoles", goals: 28 },
+  { rank: 2, name: "jorge escobar",  team: "Jijantes",          goals: 16 },
+  { rank: 3, name: "gerard verge",   team: "Porcinos",          goals: 15 },
+  { rank: 4, name: "sergi gestí",    team: "Saiyans",           goals: 14 },
+  { rank: 5, name: "galde hugue",    team: "XBuyer",            goals: 14 },
+  { rank: 6, name: "adri espinar",   team: "El Barrio",         goals: 13 },
+  { rank: 7, name: "julen álvarez",  team: "Las Chicas",        goals: 13 },
 ];
 
 export const PlayersContext = createContext<TopScorerRow[]>(DEFAULT_TOP_SCORERS);
